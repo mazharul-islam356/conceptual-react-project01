@@ -1,15 +1,18 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const MainLayout = () => {
     return (
         <div>
-
-          <h3 className="font-bold text-2xl">This is fixed</h3>
+            
+          <div className="flex justify-between mx-16  mt-10">
+          <h3 className="font-bold text-3xl text-yellow-500">Darrazz</h3>
             <div className="flex gap-10">
-                <a href="/home">Home</a>
-                <a href="/contacts">Contact Us</a>
-                <a href="/products">Our Products</a>
+                <Link to="/home">Home</Link>
+                <Link to="/contacts">Contact Us</Link>
+                <Link to="/products">Our Products</Link>
             </div>
+          </div>
+
             <Outlet></Outlet>
 
         </div>
